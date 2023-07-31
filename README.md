@@ -3,7 +3,7 @@
 📆 2023.07.31.월 ~ 2023.08.02.수
 ```
 
--<div align="center">
+<div align="center">
   <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FSWF2023-BAB%2FSWF2023-BAB&count_bg=%23F2E367&title_bg=%23605D44&icon=icq.svg&icon_color=%23E7E7E7&title=SWF+BAB&edge_flat=false"/></a>
 </div>
 
