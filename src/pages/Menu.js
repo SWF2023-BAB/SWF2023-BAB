@@ -82,17 +82,17 @@ const Menu = () => {
             marginTop: "60px",
         }}> 
             <MenuList
-                onClick={movePage('/')}>
+                onClick={() => movePage('/')}>
                 <Home/>
                 <MenuListTitle> Home </MenuListTitle>
             </MenuList>
             <MenuList
-                onClick={movePage('/contract')}>
+                onClick={() => movePage('/contract')}>
                 <Contract/>
                 <MenuListTitle> 표준 계약서 </MenuListTitle>
             </MenuList>
             <MenuList
-                onClick={movePage('/contractdetail')}>
+                onClick={()=> movePage('/contractdetail')}>
                 <History/>
                 <MenuListTitle> 납부내역 </MenuListTitle>
             </MenuList>
