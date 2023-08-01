@@ -1,5 +1,6 @@
 import React from 'react';
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
+
 import "./styles/App.css";
 
 import Home from './pages/Home';
@@ -7,6 +8,7 @@ import ContractList from './pages/contract/ContractList';
 import ContractDetail from './pages/contract/ContractDetail';
 import PresentCompany from './pages/company/PresentCompany';
 import NextCompany from './pages/company/NextCompany';
+import Menu from './pages/Menu';
 
 const App = () => {
   return(
@@ -17,6 +19,7 @@ const App = () => {
         <Route path='/contractdetail' element={<ContractDetail />}></Route>
         <Route path='/presentcompany' element={<PresentCompany/>}></Route>
         <Route path='/nextcompany' element={<NextCompany/>}></Route>
+        <Route path='/menu' element={<Menu/>}></Route>
       </Routes>
     </BrowserRouter>
   );

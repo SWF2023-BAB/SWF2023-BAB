@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import styled from "styled-components";
 import palette from "../styles/colorPalette";
-import btn from "../contents/image_btn.png";
+import btnOff from "../contents/image_btn_down.png";
+import btnOn from "../contents/image_btn_up.png";
+import Detail from '../contents/image_detail.png';
 
 // react-icons -----------------------------------------------------
 import { TbPointFilled } from "react-icons/tb";
@@ -10,7 +13,6 @@ import { TbPointFilled } from "react-icons/tb";
 import { ReactComponent as LineTra }  from "../contents/Line.svg";
 import { ReactComponent as Menu } from "../contents/Menu.svg";
 import { ReactComponent as Help } from "../contents/Help.svg";
-import { ReactComponent as Btn } from "../contents/Button.svg";
 import { ReactComponent as Trangle } from "../contents/Trangle.svg";
 
 const PageContainer = styled.div`
@@ -61,14 +63,14 @@ const SubLine = styled.hr`
 
 const Text = styled.div`
   fontSize: 14px;
-  fontFamily: NotoSansKR-Light;
+  fontFamily: "NotoSansKR-Light";
   color: #878787;
   justify-items: left;
 `;
 
 const Money = styled.div`
   font-size: 45px;
-  font-family: ChakraPetch-SemiBold;
+  font-family: "ChakraPetch-SemiBold";
   z-index: 1;
 `;
 
@@ -109,7 +111,7 @@ const BottomTitle = styled.div`
 
 const BottomText = styled.div`
   fontSize: 14px;
-  fontFamily: NotoSansKR-Light;
+  fontFamily: "NotoSansKR-Light";
   color: #5F5F5F;
   margin-left: 50px;
 `;
@@ -126,7 +128,8 @@ const BottomBtnBox = styled.div`
 `;
 
 const Home = () => {
-  const [count, setCount] = useState("7,020");
+  const [isOpenArea, setOpenArea] = useState(false);
+  const movePage = useNavigate();
 
   return (
     <PageContainer>
@@ -152,49 +155,97 @@ const Home = () => {
             Secure Adapter Zone 
           </Title>
         </div>
-        <Menu/>
+        <Menu onClick={() => movePage('/menu')}/>
       </HeaderContainer>
       <Line/>
-      <Text style={{ marginTop: "20px" }}> 
-        납부 마감일 2023/08/31 
-      </Text>
-      <Text style={{ 
-          marginTop: "3px", 
-          color: "black" 
-      }}> 
-        2023년 8월 
-      </Text>
-      <div style={{ 
-          width: "100%",
-          display: "flex", 
-          alignItems: "center",
-          marginTop: "45px",
-          marginBottom: "30px",
-          padding: "0 30px"
-      }}>
-        <Money> ₩ {count} </Money>
-        <p style={{
-            width: "170px", 
-            height: "14px", 
-            backgroundColor: "#FFD74B",
-            position: "relative",
-            right: "168px",
-            top: "18px"
-        }}/>
-        <img 
-          src={btn} 
-          style={{ 
-            width: "43px", 
-            height: "43px",
-            marginRight: "20px",
-            position: "relative",
-            marginLeft: "-50px"
-          }}
-          // onClick={() => ()}
-        />
-      </div>
+      <>
+        <Text style={{ marginTop: "20px" }}> 
+          납부 마감일 2023/08/31 
+        </Text>
+        <Text style={{ 
+            marginTop: "3px", 
+            color: "black" 
+        }}> 
+          2023년 8월 
+        </Text>
+      </>
+        <>
+          {(isOpenArea) ? (
+            <div style={{ 
+              width: "100%",
+              alignItems: "center",
+              marginTop: "45px",
+              marginBottom: "30px",
+              padding: "0 30px",
+              display: "block"
+            }}>
+              <Money> ₩ 7,020 </Money>
+              <p style={{
+                  width: "170px", 
+                  height: "14px", 
+                  backgroundColor: "#FFD74B",
+                  position: "relative",
+                  top: "-20px"
+              }}/>
+              <img 
+                src={btnOff} 
+                style={{ 
+                  width: "43px", 
+                  height: "43px",
+                  position: "relative",
+                  marginLeft: "275px",
+                  top: "-65px"
+                }}
+              />
+            </div>
+            ) : (
+              <div style={{ 
+                width: "100%",
+                alignItems: "center",
+                marginTop: "45px",
+                marginBottom: "30px",
+                padding: "0 30px",
+                display: "block"
+              }}>
+                <>
+                  <Money style={{ zIndex: "3" }}> ₩ 7,020 </Money>
+                  <p style={{
+                    width: "170px", 
+                    height: "14px", 
+                    backgroundColor: "#FFD74B",
+                    position: "relative",
+                    top: "-20px",
+                  }}/>
+                  <img 
+                    src={btnOn} 
+                    style={{ 
+                      width: "43px", 
+                      height: "43px",
+                      position: "relative",
+                      marginLeft: "275px",
+                      top: "-65px"
+                    }}
+                  />
+                </>
+                <img 
+                  src={Detail}
+                  style={{ 
+                    width: "100%",
+                    height: "410px",
+                    backgroundColor: "#D9D9D9"
+                }}> 
+                </img>
+              </div>
+            )}
+        </>
+      {/* </div> */}
       <LineTra/>
-      <Text style={{ marginTop: "40px" }}> 납입자번호 : 480422 </Text>
+      <Text style={{ 
+        marginTop: "35px",
+        marginBottom: "5px",
+        marginRight: "10px"
+         }}> 납입자번호 : 480422
+      </Text>
       <Text style={{ 
         marginTop: "3px",
         marginBottom: "35px" }}> 허리도 가늘고 만지면 부러지리 1149-12 
