@@ -14,6 +14,7 @@ import { ReactComponent as LineTra }  from "../contents/Line.svg";
 import { ReactComponent as Menu } from "../contents/Menu.svg";
 import { ReactComponent as Help } from "../contents/Help.svg";
 import { ReactComponent as Trangle } from "../contents/Trangle.svg";
+import Price from '../contents/ic_price.svg';
 
 const PageContainer = styled.div`
   background-color: white;
@@ -131,6 +132,10 @@ const Home = () => {
   const [isOpenArea, setOpenArea] = useState(false);
   const movePage = useNavigate();
 
+  const onClickOpen = () => {
+    setOpenArea(isOpenArea => (!isOpenArea));
+  }
+
   return (
     <PageContainer>
       <Line/>
@@ -179,14 +184,15 @@ const Home = () => {
               padding: "0 30px",
               display: "block"
             }}>
-              <Money> ₩ 7,020 </Money>
+              {/* <Money> ₩ 7,020 </Money>
               <p style={{
                   width: "170px", 
                   height: "14px", 
                   backgroundColor: "#FFD74B",
                   position: "relative",
                   top: "-20px"
-              }}/>
+              }}/> */}
+              <img src={Price}/>
               <img 
                 src={btnOff} 
                 style={{ 
@@ -194,8 +200,9 @@ const Home = () => {
                   height: "43px",
                   position: "relative",
                   marginLeft: "275px",
-                  top: "-65px"
+                  top: "-50px"
                 }}
+                onClick={onClickOpen}
               />
             </div>
             ) : (
@@ -208,14 +215,15 @@ const Home = () => {
                 display: "block"
               }}>
                 <>
-                  <Money style={{ zIndex: "3" }}> ₩ 7,020 </Money>
+                  {/* <Money style={{ zIndex: "3" }}> ₩ 7,020 </Money>
                   <p style={{
                     width: "170px", 
                     height: "14px", 
                     backgroundColor: "#FFD74B",
                     position: "relative",
                     top: "-20px",
-                  }}/>
+                  }}/> */}
+                  <img src={Price}/>
                   <img 
                     src={btnOn} 
                     style={{ 
@@ -223,8 +231,9 @@ const Home = () => {
                       height: "43px",
                       position: "relative",
                       marginLeft: "275px",
-                      top: "-65px"
+                      top: "-50px"
                     }}
+                    onClick={onClickOpen}
                   />
                 </>
                 <img 
@@ -233,7 +242,8 @@ const Home = () => {
                     width: "100%",
                     height: "410px",
                     backgroundColor: "#D9D9D9"
-                }}> 
+                  }}
+                > 
                 </img>
               </div>
             )}
