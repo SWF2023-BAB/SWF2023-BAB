@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import styled from "styled-components";
 import palette from "../styles/colorPalette";
@@ -43,7 +44,7 @@ const Point = styled(TbPointFilled)`
 `;
 
 const Title = styled.p`
-  fontSize: 16px;
+  font-size: 16px;
   text-align: center;
   margin: auto;
 `;
@@ -63,8 +64,8 @@ const SubLine = styled.hr`
 `;
 
 const Text = styled.div`
-  fontSize: 14px;
-  fontFamily: "NotoSansKR-Light";
+  font-size: 14px;
+  font-family: "NotoSansKR-Light";
   color: #878787;
   justify-items: left;
 `;
@@ -111,8 +112,8 @@ const BottomTitle = styled.div`
 `;
 
 const BottomText = styled.div`
-  fontSize: 14px;
-  fontFamily: "NotoSansKR-Light";
+  font-size: 14px;
+  font-family: "NotoSansKR-Light";
   color: #5F5F5F;
   margin-left: 50px;
 `;
@@ -194,6 +195,7 @@ const Home = () => {
               }}/> */}
               <img src={Price}/>
               <img 
+                alt="버튼"
                 src={btnOff} 
                 style={{ 
                   width: "43px", 
@@ -225,6 +227,7 @@ const Home = () => {
                   }}/> */}
                   <img src={Price}/>
                   <img 
+                    alt="버튼"
                     src={btnOn} 
                     style={{ 
                       width: "43px", 
@@ -237,6 +240,7 @@ const Home = () => {
                   />
                 </>
                 <img 
+                  alt="버튼"
                   src={Detail}
                   style={{ 
                     width: "100%",
@@ -291,7 +295,11 @@ const Home = () => {
       <BottomText> 경상남도 창원시 와와로 강강길 32-2 </BottomText>
       <SubLine style={{ border: "1px dashed #111111"}}/>
       <>
-        <BottomBtnBox> 우리집 전력공사 규정 확인하기 </BottomBtnBox>
+        <Link
+          to={`/presentcompany`}
+          style={{ textDecoration: "none" }}>
+          <BottomBtnBox> 우리집 전력공사 규정 확인하기 </BottomBtnBox>
+        </Link>
       </>
       <Line/>
 
@@ -307,9 +315,13 @@ const Home = () => {
       <BottomText> 전라북도 전주시 바바로 기린길 13-8 </BottomText>
       <SubLine style={{ border: "1px dashed #111111"}}/>
       <>
-        <BottomBtnBox style={{ 
-          backgroundColor: "#F4F4F4",
-        }}> 변경 될 전력공사 규정 확인하기  </BottomBtnBox>
+        <Link
+          to={`/nextcompany`}
+          style={{ textDecoration: "none" }}>
+          <BottomBtnBox style={{ 
+            backgroundColor: "#F4F4F4",
+          }}> 변경 될 전력공사 규정 확인하기  </BottomBtnBox>
+        </Link>
       </>
     </PageContainer>
   );
