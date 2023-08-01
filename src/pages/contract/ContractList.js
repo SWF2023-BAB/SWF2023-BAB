@@ -2,12 +2,12 @@
 import { useEffect, useState } from "react";
 
 import styled from "styled-components";
-import palette from "../styles/colorPalette";
+import palette from "../../styles/colorPalette";
 
-import backBtn from "../contents/ic_back_btn.svg";
-import menuBtn from "../contents/ic_menu_btn.svg";
-import toggleClose from "../contents/ic_toggle_close.svg";
-import toggleOpen from "../contents/ic_toggle_open.svg";
+import backBtn from "../../contents/ic_back_btn.svg";
+import menuBtn from "../../contents/ic_menu_btn.svg";
+import toggleClose from "../../contents/ic_toggle_close.svg";
+import toggleOpen from "../../contents/ic_toggle_open.svg";
 
 const ContractList = () => {
   const areas = ["전체", "서울", "강원", "인천/경기", "충청/대전", "전라/광주", "경북/대구", "경남/부산/울산", "제주"];
@@ -87,22 +87,22 @@ const Header = styled.div`
   align-items: center;
 `;
 const BackBtn = styled.img`
-  width: 2vw;
-  height: 4vw;
+  width: 5vw;
+  height: 10vw;
   padding: 1vw;
-  margin: 5vw;
+  margin: 2.5vw;
 `;
 const HeaderTitle = styled.header`
   margin: auto;
   font-size: 16px;
-  color: ${palette.black};
+  color: ${palette.black11};
   font-weight: 600;
 `;
 const MenuBtn = styled.img`
-  width: 4.5vw;
-  height: 3vw;
+  width: 7.2vw;
+  height: 5vw;
   padding: 1vw;
-  margin: 5vw;
+  margin: 2.5vw;
 `;
 
 const Company = styled.div`
