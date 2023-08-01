@@ -1,0 +1,33 @@
+#root {
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+* {
+    /* Clear CSS */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+    color: inherit;
+    flex-shrink: 0;
+ }
+
+/* font */
+@font-face {
+    font-family: "ChakraPetch-Bold";
+    src: url('../Fonts/ChakraPetch-Bold.ttf');
+}
+
+@font-face {
+    font-family: "ChakraPetch-light";
+    src: url('../Fonts/ChakraPetch-Light.ttf');
+}
+
+@font-face {
+    font-family: "NotoSansKR-Light";
+    src: url('../Fonts//NotoSansKR-Light.otf');
+}
