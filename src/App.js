@@ -1,5 +1,6 @@
 import React from 'react';
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import styled from "styled-components";
 import "./styles/App.css";
 
 import Home from './pages/Home';
@@ -13,7 +14,7 @@ const App = () => {
         <Route path='/contract' element={<ContractList />}></Route>
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
 export default App;
