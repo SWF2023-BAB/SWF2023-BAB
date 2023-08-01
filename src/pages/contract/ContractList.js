@@ -1,5 +1,6 @@
 // 표준 계약서
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 import palette from "../../styles/colorPalette";
@@ -25,7 +26,11 @@ const ContractList = () => {
       {/* 헤더 */}
       <HeaderLine/>
       <Header>
-        <BackBtn src={backBtn}/>
+        <Link
+          to={`/`}
+          style={{ textDecoration: "none" }}>
+          <BackBtn src={backBtn}/>
+        </Link>
         <HeaderTitle>표준계약서</HeaderTitle>
         <MenuBtn src={menuBtn}/>
       </Header>
@@ -45,7 +50,11 @@ const ContractList = () => {
                 </AreaBtn>
                 <AreaDashLine/>
                 {lists.map(list => (
-                  <SelectList>{list}</SelectList>
+                  <Link
+                    to={`/contractdetail`}
+                    style={{ textDecoration: "none" }}>
+                    <SelectList>{list}</SelectList>
+                  </Link>
                 ))}
                 <AreaLine/>
               </SelectDiv>)
@@ -87,8 +96,8 @@ const Header = styled.div`
   align-items: center;
 `;
 const BackBtn = styled.img`
-  width: 5vw;
-  height: 10vw;
+  width: 4vw;
+  height: 8vw;
   padding: 1vw;
   margin: 2.5vw;
 `;
