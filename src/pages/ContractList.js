@@ -1,5 +1,5 @@
 // 표준 계약서
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import styled from "styled-components";
 import palette from "../styles/colorPalette";

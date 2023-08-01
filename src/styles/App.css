@@ -23,6 +23,11 @@
 }
 
 @font-face {
+    font-family: "ChakraPetch-SemiBold";
+    src: url('../Fonts/ChakraPetch-SemiBold.ttf');
+}
+
+@font-face {
     font-family: "ChakraPetch-light";
     src: url('../Fonts/ChakraPetch-Light.ttf');
 }
