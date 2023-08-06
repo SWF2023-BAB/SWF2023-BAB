@@ -61,6 +61,12 @@
 
 ---
 
+### 🛠️ Tech Stack
+<a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="react" height="24"/> </a> <!--React -->
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="http://img.shields.io/badge/-Javascript-f7e018?style=for-the-badge&logo=javascript&logoColor=black" alt="javascript" height="24"/> </a> <!-- JavaScript -->
+
+---
+
 ### 🪄 Result
 ![최종  3-2  서비스(2) - 메인 페이지 + 현 회사 및 변경 회사 안내](https://github.com/SWF2023-BAB/.github/assets/76805879/6804fbeb-6e54-4e3c-a1b5-be0260b80fc8)
 
